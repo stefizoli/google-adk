@@ -18,7 +18,8 @@ import (
 func main() {
     ctx := context.Background()
 
-    model, err := gemini.NewModel(ctx, "gemini-3-pro-preview", &genai.ClientConfig{
+    //https://ai.google.dev/gemini-api/docs/pricing
+	model, err := gemini.NewModel(ctx, "gemini-2.0-flash-lite", &genai.ClientConfig{
         APIKey: os.Getenv("GOOGLE_API_KEY"),
     })
     if err != nil {
